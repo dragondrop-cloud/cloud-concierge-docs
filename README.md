@@ -1,6 +1,6 @@
 ---
-description: Testing syncrhonization
+description: The what, where and how of the cloud-concierge tool.
 ---
 
-# Page
+# cloud-concierge docs
 
