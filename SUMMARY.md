@@ -3,6 +3,7 @@
 * [Introduction](README.md)
 * [How it Works](how-it-works/README.md)
   * [Pull Request Output](how-it-works/pull-request-output.md)
+  * [Security](how-it-works/security.md)
 * [Running cloud-concierge](running-cloud-concierge/README.md)
   * [Getting Started](running-cloud-concierge/getting-started.md)
   * [Environment Variables](running-cloud-concierge/environment-variables.md)
