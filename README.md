@@ -14,6 +14,10 @@ cloud-concierge is an OSS container that allows you to layer functionality on to
 
 cloud-concierge delivers all of the following features directly as a Pull Request to a version control repository of your choice. It currently supports AWS, Azure, and GCP, and integrates with GitHub as a version control system.
 
+### Motivation
+
+TODO
+
 ### Quick Start
 
 Configure an environment variable file (using one of our templates to get started), and then run cloud-concierge the following command:
