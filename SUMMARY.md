@@ -8,6 +8,7 @@
   * [Environment Variables](running-cloud-concierge/environment-variables.md)
   * [Supported Tech Stack](running-cloud-concierge/supported-tech-stack.md)
   * [Running Imports with CI/CD](running-cloud-concierge/running-imports-with-ci-cd.md)
+* [Contributing](contributing.md)
 * [Supported Cloud Resources](supported-cloud-resources/README.md)
   * [AWS](supported-cloud-resources/aws.md)
   * [Azure](supported-cloud-resources/azure.md)
