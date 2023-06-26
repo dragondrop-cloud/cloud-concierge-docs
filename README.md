@@ -16,11 +16,13 @@ cloud-concierge delivers all of the following features directly as a Pull Reques
 
 ### Motivation
 
-TODO
+Many teams build their own Terraform management "stacks" using major cloud provider state backends and tools like Atlantis for running `plan` and `apply` and state-locking.
+
+For more sophisticated tooling, some may turn to tools like Terraform Cloud, Scalr, Spacelift and Firefly. We find, however, that these tool's pricing can become particularly onerous (or features simply don't exist) to allow self-hosted runners or access the most desired features like drift detection, cloud codification, security scanning, etc. for an entire cloud environment.
 
 ### Quick Start
 
-Configure an environment variable file (using one of our templates to get started), and then run cloud-concierge the following command:
+Configure an environment variable file (using [one of our templates](https://github.com/dragondrop-cloud/cloud-concierge/tree/dev/examples/environments) to get started), and then run cloud-concierge the following command:
 
 ```bash
 docker run --env-file ./my-env-file.env -v main:/main -w /main  dragondropcloud/cloud-concierge:latest
