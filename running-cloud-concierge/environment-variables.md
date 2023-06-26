@@ -90,6 +90,12 @@ Using [dragondrop.cloud](https://app.dragondrop.cloud) as a managed solution all
 * **Structure**: \["tf\_resource\_1", "tf\_resource\_2"]
 * **Example**: \["aws\_lb", "google\_storage\_bucket"]
 
+`CLOUDCONCIERGE_ISMANAGEDDRIFTONLY` - Optional
+
+* **Description**: Optional boolean variable for whether cloud-concierge should only identify drift for resources already managed by Terraform.
+  * Defaults to False
+* **Example**: False
+
 ### Version Control System (VCS) Env Vars
 
 `CLOUDCONCIERGE_VCSSYSTEM`
