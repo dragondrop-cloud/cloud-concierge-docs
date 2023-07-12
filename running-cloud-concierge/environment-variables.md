@@ -50,6 +50,11 @@ Using [dragondrop.cloud](https://app.dragondrop.cloud) as a managed solution all
 * **Description**: Terraform providers semantic version numbers
 * **Example**: google:\~>4.27.0,aws:\~>4.59.0
 
+`CLOUDCONCIERGE_REGIONS`
+
+* **Description**: A list of cloud provider regions to scan. Currently allowed only one region can be scanned per provider.
+* **Example**: \["eastus", "us-east-1", "us-east1"]
+
 ### Terraform State Backend Env Vars
 
 `CLOUDCONCIERGE_STATEBACKEND`
