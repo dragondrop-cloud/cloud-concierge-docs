@@ -73,7 +73,7 @@ Using [dragondrop.cloud](https://app.dragondrop.cloud) as a managed solution all
 
 `CLOUDCONCIERGE_DIVISIONCLOUDCREDENTIALS`
 
-* **Description**: Mapping between the name of a division of a public cloud provider and the corresponding credential for access to your cloud environment.
+* **Description**: Mapping between the name of a division of a public cloud provider and the corresponding credential for access to your cloud environment. Only read-only access should be granted to your cloud provider. If using your cloud provider as a state backend, read-acccess to the state backend storage source should also be included within each credential.
   * A division for AWS is an account name, for Azure it is a resource group, and for GCP it is a project.
   * _AWS Example_: A service account credentials key map of the format {awsAccessKeyID: "", awsSecretAccessKey:""}
   * _Google Example_: A service account key with new-lines and tabs removed.
