@@ -28,7 +28,7 @@ Configure an environment variable file (using [one of our templates](https://git
 docker run --env-file ./my-env-file.env -v main:/main -w /main  dragondropcloud/cloud-concierge:latest
 ```
 
-For more details, see [Getting Started](running-cloud-concierge/getting-started.md).
+For more details, see [Getting Started](getting-started.md).
 
 ### Managed Offering
 

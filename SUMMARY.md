@@ -1,11 +1,11 @@
 # Table of contents
 
 * [Introduction](README.md)
+* [Getting Started](getting-started.md)
 * [How it Works](how-it-works/README.md)
   * [Pull Request Output](how-it-works/pull-request-output.md)
   * [Security](how-it-works/security.md)
 * [Running cloud-concierge](running-cloud-concierge/README.md)
-  * [Getting Started](running-cloud-concierge/getting-started.md)
   * [Environment Variables](running-cloud-concierge/environment-variables.md)
   * [Supported Tech Stack](running-cloud-concierge/supported-tech-stack.md)
   * [Running Imports with CI/CD](running-cloud-concierge/running-imports-with-ci-cd.md)
