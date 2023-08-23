@@ -12,7 +12,7 @@ description: The what, where and how of the cloud-concierge tool.
 * :white\_check\_mark: Cloud-wide cost estimation, powered by infracost
 * :white\_check\_mark: Cloud-wide security scans, powered by tfsec (checkov integration coming soon)
 
-cloud-concierge delivers all of the following features directly as a Pull Request to a version control repository of your choice. It currently supports AWS, Azure, and GCP, and integrates with GitHub as a version control system.
+cloud-concierge delivers all of these features directly as a Pull Request to a version control repository of your choice. It currently supports AWS, Azure, and GCP, and integrates with GitHub as a version control system.
 
 ### Motivation
 
