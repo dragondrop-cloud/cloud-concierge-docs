@@ -20,18 +20,12 @@ Many teams build their own Terraform management "stacks" using major cloud provi
 
 For more sophisticated tooling, some may turn to tools like Terraform Cloud, Scalr, Spacelift and Firefly. We find, however, that these tool's pricing can become particularly onerous (or features simply don't exist) to allow self-hosted runners or access the most desired features like drift detection, cloud codification, security scanning, etc. for an entire cloud environment.
 
-### Quick Start
+### [Quick Start](./#quick-start)
 
-Configure an environment variable file (using [one of our templates](https://github.com/dragondrop-cloud/cloud-concierge/tree/dev/examples/environments) to get started), and then run cloud-concierge the following command:
-
-```bash
-docker run --env-file ./my-env-file.env -v main:/main -w /main  dragondropcloud/cloud-concierge:latest
-```
-
-For more details, see [Getting Started](getting-started.md).
+Get outputs from cloud-concierge in minutes!
 
 ### Managed Offering
 
 [dragondrop.cloud](https://dragondrop.cloud) provides a managed offering for configuring cloud-concierge using a user interface, coordinating scheduled executions, and visualizing results across time and multiple cloud-concierge configurations.
 
-All usages of cloud-concierge are self-hosted, and you can try the platform out for [free today](https://app.dragondrop.cloud).
+All usages of cloud-concierge are self-hosted and you can try the platform out for [free today](https://app.dragondrop.cloud). We provide white-glove support for onboarding customers and estimate most can get started within 20 minutes or less using our [Terraform modules](https://registry.terraform.io/namespaces/dragondrop-cloud).

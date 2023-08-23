@@ -1,10 +1,10 @@
 # Table of contents
 
 * [Introduction](README.md)
-* [Getting Started](getting-started.md)
+* [Quick Start](quick-start.md)
 * [How it Works](how-it-works/README.md)
   * [Pull Request Output](how-it-works/pull-request-output.md)
-  * [Security](how-it-works/security.md)
+* [🔓 Security](security.md)
 * [Running cloud-concierge](running-cloud-concierge/README.md)
   * [Environment Variables](running-cloud-concierge/environment-variables.md)
   * [Supported Tech Stack](running-cloud-concierge/supported-tech-stack.md)

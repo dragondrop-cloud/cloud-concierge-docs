@@ -2,10 +2,14 @@
 description: >-
   A cloud-concierge Pull Request include Terraform code for previously
   un-codified resources, as well as a "State of Cloud Report" with info on
-  drift, costs, and cloud security.
+  drift, costs, cloud security, and more.
 ---
 
 # Pull Request Output
+
+### Example Pull Request Output
+
+We have a live example of cloud-concierge output on GitHub [here](https://github.com/dragondrop-cloud/cloud-concierge-example/pull/2).
 
 ### New Terraform Code for External Resources
 

@@ -11,7 +11,7 @@ description: Customizing the execution of cloud-concierge with environment varia
 
 ### Managed Solution
 
-Using [dragondrop.cloud](https://app.dragondrop.cloud) as a managed solution allows the management of all non-sensitive variables through a user interface.
+Using [dragondrop.cloud](https://app.dragondrop.cloud) as a management platform allows for all but the VCSTOKEN variable to be specified through an intuitive user interface.
 
 ## Variable Descriptions
 
@@ -25,7 +25,7 @@ Using [dragondrop.cloud](https://app.dragondrop.cloud) as a managed solution all
 
 `CLOUDCONCIERGE_MIGRATIONHISTORYSTORAGE`
 
-* **Description**: Optional variable if wishing to [run CI/CD](running-imports-with-ci-cd.md) in GitHub Actions with Terraform pre-1.5.
+* **Description**: _Optional_ variable if wishing to [run CI/CD](running-imports-with-ci-cd.md) in GitHub Actions with Terraform pre-1.5. We strongly recommend running cloud-concierge with at least version 1.5.0 of Terraform to take advantage of [import blocks](https://dragondrop.cloud/2023/06/13/terraform-1-5-xs-import-block/).
   * At this point in time, only AWS and GCP history storages are supported.
 * **Example** **GCP**: {"storageType":"Google Storage Bucket","bucket":"imports-history-exmaple","region":"us-east4"}
 * **Example AWS**: {"storageType":"S3","bucket":"imports-history-exmaple","region":"us-east-1"}&#x20;
@@ -42,18 +42,18 @@ Using [dragondrop.cloud](https://app.dragondrop.cloud) as a managed solution all
 
 `CLOUDCONCIERGE_TERRAFORMVERSION`
 
-* **Description**: Terraform semantic version number
+* **Description**: Terraform semantic version number. We strongly recommend running cloud-concierge with at least version 1.5.0 of Terraform to take advantage of [import blocks](https://dragondrop.cloud/2023/06/13/terraform-1-5-xs-import-block/).
 * **Example**: 1.5.1
 
-`CLOUDCONCIERGE_PROVIDERS`
+`CLOUDCONCIERGE_PROVIDER`
 
-* **Description**: Terraform providers semantic version numbers
-* **Example**: google:\~>4.27.0,aws:\~>4.59.0
+* **Description**: A Terraform provider with a semantic version to use within the cloud-concierge execution.
+* **Example**: google:\~>4.27.0
 
 `CLOUDCONCIERGE_REGIONS`
 
-* **Description**: A list of cloud provider regions to scan. Currently allowed only one region can be scanned per provider.
-* **Example**: \["eastus", "us-east-1", "us-east1"]
+* **Description**: A region of a major cloud provider to scan. Currently only one region can be scanned at a time.
+* **Example**: \["eastus"]
 
 ### Terraform State Backend Env Vars
 
@@ -65,21 +65,17 @@ Using [dragondrop.cloud](https://app.dragondrop.cloud) as a managed solution all
 
 `CLOUDCONCIERGE_WORKSPACEDIRECTORIES`
 
-* **Description**: A list of relative directories within the VCS repo cloned by cloud-concierge. Each relative directory in the list should correspond to a single "state file" of Terraform infrastructure.
+* **Description**: A list of relative directories within the VCS repo to be cloned by cloud-concierge. Each relative directory in the list should correspond to a single "state file" of Terraform infrastructure.
   * Name comes from the idea of a "Workspace" in Terraform Cloud.
 * **Example**: /my/relative/path/1/,/my/relative/path/2/
 
 ### Scanning Your Cloud Env Vars
 
-`CLOUDCONCIERGE_DIVISIONCLOUDCREDENTIALS`
+`CLOUDCONCIERGE_DIVISION`
 
-* **Description**: Mapping between the name of a division of a public cloud provider and the corresponding credential for access to your cloud environment. Only read-only access should be granted to your cloud provider. If using your cloud provider as a state backend, read-acccess to the state backend storage source should also be included within each credential.
+* **Description**: Name of a division of a public cloud provider and the corresponding credential for access to your cloud environment.
   * A division for AWS is an account name, for Azure it is a resource group, and for GCP it is a project.
-  * _AWS Example_: A service account credentials key map of the format {awsAccessKeyID: "", awsSecretAccessKey:""}
-  * _Google Example_: A service account key with new-lines and tabs removed.
-  * _Azure Example_: A service account identifying JSON dictionary
-* **Structure**: "{google-divisionName1}:{serviceAccount1}"
-* **Example**: my-gcp-project:{service account secret key},my-aws-account:{awsAccessKeyID": "MYKEYID","awsSecretAccessKey": "MYSECRETKEYID"},my-azure-resource-group:{"client\_id":"","client\_secret":"","tenant\_id":"","subscription\_id":""}
+* **Structure**: "my-aws-account-name"
 
 `CLOUDCONCIERGE_RESOURCESWHITELIST`
 
@@ -102,17 +98,6 @@ Using [dragondrop.cloud](https://app.dragondrop.cloud) as a managed solution all
 * **Example**: False
 
 ### Version Control System (VCS) Env Vars
-
-`CLOUDCONCIERGE_VCSSYSTEM`
-
-* **Description**: Name of the VCS system to be referenced.
-  * At this point in time, only the value `github` is supported.
-* **Example**: github
-
-`CLOUDCONCIERGE_VCSBASEBRANCH`
-
-* **Description**: Name of the base branch against which a Pull Request created by cloud-concierge should be opened.
-* **Example**: main
 
 `CLOUDCONCIERGE_VCSTOKEN`
 
