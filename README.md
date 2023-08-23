@@ -26,6 +26,10 @@ Get outputs from cloud-concierge in minutes!
 
 ### Managed Offering
 
+{% embed url="https://www.youtube.com/watch?v=qBIvrjHsJZo" %}
+Sizzle of the managed offering for the cloud-concierge container
+{% endembed %}
+
 [dragondrop.cloud](https://dragondrop.cloud) provides a managed offering for configuring cloud-concierge using a user interface, coordinating scheduled executions, and visualizing results across time and multiple cloud-concierge configurations.
 
 All usages of cloud-concierge are self-hosted and you can try the platform out for [free today](https://app.dragondrop.cloud). We provide white-glove support for onboarding customers and estimate most can get started within 20 minutes or less using our [Terraform modules](https://registry.terraform.io/namespaces/dragondrop-cloud).
