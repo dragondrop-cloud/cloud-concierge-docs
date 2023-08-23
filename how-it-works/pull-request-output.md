@@ -9,7 +9,7 @@ description: >-
 
 ### Example Pull Request Output
 
-We have a live example of cloud-concierge output on GitHub [here](https://github.com/dragondrop-cloud/cloud-concierge-example/pull/2).
+We have a live example of cloud-concierge output on GitHub [**here**](https://github.com/dragondrop-cloud/cloud-concierge-example/pull/2).
 
 ### New Terraform Code for External Resources
 
