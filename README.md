@@ -4,7 +4,7 @@ description: The what, where and how of the cloud-concierge tool.
 
 # Introduction
 
-cloud-concierge is an OSS container that allows you to layer functionality on top of an existing Terraform workflow. Namely:
+[cloud-concierge is an OSS container](https://github.com/dragondrop-cloud/cloud-concierge) that allows you to layer functionality on top of an existing Terraform workflow. Namely:
 
 * :white\_check\_mark: Cloud Codification
 * :white\_check\_mark: Drift Detection&#x20;
