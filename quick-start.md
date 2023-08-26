@@ -4,7 +4,7 @@ description: Get results in minutes for either AWS, GCP, or Azure
 
 # Quick Start
 
-### All Cloud Provider Pre-requisities
+### All Cloud Provider Pre-requisites
 
 0\) Obtain an API token at [https://app.dragondrop.cloud](https://app.dragondrop.cloud). We only collect data on when a cloud-concierge starts up (this can be verified [here](https://github.com/dragondrop-cloud/cloud-concierge/blob/dev/main/internal/implementations/dragon\_drop/http\_dragondrop\_oss\_methods.go)).
 
