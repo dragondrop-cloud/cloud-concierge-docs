@@ -22,6 +22,8 @@ b) Run the cloud-concierge container using the following command:
 docker run --env-file ./my-env-file.env -v main:/main -v ~/.aws:/main/credentials/aws:ro -w /main  dragondropcloud/cloud-concierge:latest
 ```
 
+On Windows, substitute `$HOME/.aws:` for `~/.aws:`in the above command.
+
 c) Upon job completion, check the repository against which you configured cloud-concierge to run. There will be a new [Pull Request](how-it-works/pull-request-output.md) that has been created by Cloud Concierge.
 
 ### GCP
@@ -37,7 +39,7 @@ docker run --env-file ./my-env-file.env -v main:/main -v ~/.config/gcloud:/main/
 b.2) On Windows, run the cloud-concierge container using the following command:
 
 ```
-docker run --env-file ./my-env-file.env -v main:/main -v ~/AppData/Roaming/gcloud:/main/credentials/gcp:ro -w /main  dragondropcloud/cloud-concierge:latest
+docker run --env-file ./my-env-file.env -v main:/main -v $HOME/AppData/Roaming/gcloud:/main/credentials/gcp:ro -w /main  dragondropcloud/cloud-concierge:latest
 ```
 
 ### Azure
@@ -55,3 +57,5 @@ b) Run the cloud-concierge container using the following command:
 ```
 docker run --env-file ./my-env-file.env -v main:/main -v ~/.azure:/main/credentials/azurerm:ro -w /main  dragondropcloud/cloud-concierge:latest
 ```
+
+On Windows,substitute `$HOME/.azure:` for `~/.azure:`in the above command.
