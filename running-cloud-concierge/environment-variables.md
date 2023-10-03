@@ -11,7 +11,7 @@ description: Customizing the execution of cloud-concierge with environment varia
 
 ### Managed Solution
 
-Using [dragondrop.cloud](https://app.dragondrop.cloud) as a management platform allows for all but the VCSTOKEN variable to be specified through an intuitive user interface.
+Using [dragondrop.cloud](https://app.dragondrop.cloud) as a management platform allows for all required variables to configured via a user interface.
 
 ## Variable Descriptions
 
@@ -23,20 +23,12 @@ Using [dragondrop.cloud](https://app.dragondrop.cloud) as a management platform 
   * Sign-into the [dragondrop management platform](https://app.dragondrop.cloud) through GitHub social sign-on. You will be redirected to the "Organization" tab, where you will have the opportunity to copy your org token.
 * **Example**: cco-my-org-token
 
-`CLOUDCONCIERGE_MIGRATIONHISTORYSTORAGE`
+`CLOUDCONCIERGE_MIGRATIONHISTORYSTORAGE` - OPTIONAL
 
-* **Description**: _Optional_ variable if wishing to [run CI/CD](running-imports-with-ci-cd.md) in GitHub Actions with Terraform pre-1.5. We strongly recommend running cloud-concierge with at least version 1.5.0 of Terraform to take advantage of [import blocks](https://dragondrop.cloud/2023/06/13/terraform-1-5-xs-import-block/).
+* **Description**: Optional variable if wishing to [run CI/CD](running-imports-with-ci-cd.md) in GitHub Actions with Terraform pre-1.5. We strongly recommend running cloud-concierge with at least version 1.5.0 of Terraform to take advantage of [import blocks](https://dragondrop.cloud/2023/06/13/terraform-1-5-xs-import-block/).
   * At this point in time, only AWS and GCP history storages are supported.
 * **Example** **GCP**: {"storageType":"Google Storage Bucket","bucket":"imports-history-exmaple","region":"us-east4"}
 * **Example AWS**: {"storageType":"S3","bucket":"imports-history-exmaple","region":"us-east-1"}&#x20;
-
-### Cost Calculation Tokens Job Env Vars
-
-`CLOUDCONCIERGE_INFRACOSTAPITOKEN`
-
-* **Description**: Registered Infracost API token. Can be either hosted or self hosted.
-  * Docs on Infracost API token creation can be found [here](https://github.com/infracost/cloud-pricing-api).
-* **Example**: my-infracost-api-token
 
 ### Terraform Env Vars
 
@@ -99,29 +91,18 @@ Using [dragondrop.cloud](https://app.dragondrop.cloud) as a management platform 
 
 ### Version Control System (VCS) Env Vars
 
-`CLOUDCONCIERGE_VCSTOKEN`
-
-* **Description**: Personal access token for the VCS provider specified. Allows the containerized executable to interact with the VCS provider to open a pull request containing new resources and needed migrations.
-  * For GitHub, should only be provided "Repo" permissions.
-* **Example**: ghp\_my-github-access-token
-
-`CLOUDCONCIERGE_VCSUSER`
-
-* **Description**: User ID for the user who's personal access token is being used for repo access.
-* **Example**: MyTeamMember
-
 `CLOUDCONCIERGE_VCSREPO`
 
-* **Description**: Personal access token for the VCS provider specified. Allows the containerized executable to interact with the VCS provider to open a pull request containing new resources and needed migrations.
+* **Description**: Personal access token for the VCS provider specified. Allows the containerized executable to interact with the VCS provider to open a pull request containing new resources and needed migrations. The cloud-concierge [GitHub app](https://github.com/apps/cloud-concierge) should be installed on the repo specified.
   * For GitHub, should only be provided "Repo" permissions.
 * **Example**: ghp\_my-github-access-token
 
 `CLOUDCONCIERGE_VCSPULLREVIEWERS`
 
-* **Description**: VCS user name to be assigned as  Pull Request reviewer once cloud-concierge creates a pull request.
+* **Description**: VCS user name to be assigned as  Pull Request reviewer once cloud-concierge creates a pull request. To have no assigned reviewer, specify "NoReviewer".
 * **Example**: MyPRReviewerID
 
-### Terraform Cloud Env Vars (if selected as your state backend)
+### Terraform Cloud Env Vars (Required if selected as your state backend)
 
 `CLOUDCONCIERGE_TERRAFORMCLOUDTOKEN`
 

@@ -1,5 +1,5 @@
 ---
-description: Get results in minutes for either AWS, GCP, or Azure
+description: Get results in < 5 minutes for either AWS, GCP, or Azure
 ---
 
 # Quick Start
@@ -8,9 +8,11 @@ description: Get results in minutes for either AWS, GCP, or Azure
 
 0\) Obtain an API token at [https://app.dragondrop.cloud](https://app.dragondrop.cloud). We only collect data on when a cloud-concierge starts up (this can be verified [here](https://github.com/dragondrop-cloud/cloud-concierge/blob/dev/main/internal/implementations/dragon\_drop/http\_dragondrop\_oss\_methods.go)).
 
-1\) Configure an environment variable file (use [one of our templates](https://github.com/dragondrop-cloud/cloud-concierge/tree/dev/examples/environments) to get started) to control the specifics of cloud-concierge's coverage.&#x20;
+1\) Add the [cloud-concierge GitHub App](https://github.com/apps/cloud-concierge) to the repository into which generated Pull Requests should be output.
 
-2\) Make sure you have Docker available on your local machine.
+2\) Configure an environment variable file (use one of our [templates](https://github.com/dragondrop-cloud/cloud-concierge/tree/dev/examples/environments/) to get started) to control the specifics of cloud-concierge's coverage.
+
+3\) Run `docker pull dragondropcloud/cloud-concierge:latest` to pull the latest image.
 
 ### AWS
 
@@ -58,4 +60,4 @@ b) Run the cloud-concierge container using the following command:
 docker run --env-file ./my-env-file.env -v main:/main -v ~/.azure:/main/credentials/azurerm:ro -w /main  dragondropcloud/cloud-concierge:latest
 ```
 
-On Windows,substitute `$HOME/.azure:` for `~/.azure:`in the above command.
+On Windows, substitute `$HOME/.azure:` for `~/.azure:`in the above command.

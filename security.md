@@ -16,7 +16,7 @@ When generating roles for cloud-concierge to be able to complete the requisite c
 
 ### (3) Changes are recommended via Pull Request, never made directly.
 
-The cloud-concierge container will never directly make changes to your Terraform code base. It will only open a Pull Request in your VCS containing recommended changes and import blocks/import statements.
+The cloud-concierge container will never directly make changes to your Terraform code base. It will (via a [GitHub App](https://github.com/apps/cloud-concierge)) only open a Pull Request in your VCS containing recommended changes and import blocks/import statements.
 
 * Like all other code, your developers have final sign-off and approval on whether to merge the suggestions.
 * Comments, discussions and changes to the original cloud-concierge suggestions are all recorded within your VCS.

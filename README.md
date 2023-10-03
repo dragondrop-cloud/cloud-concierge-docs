@@ -20,9 +20,9 @@ Many teams build their own Terraform management "stacks" using major cloud provi
 
 For more sophisticated tooling, some may turn to tools like Terraform Cloud, Scalr, Spacelift and Firefly. We find, however, that these tool's pricing can become particularly onerous (or features simply don't exist) to allow self-hosted runners or access the most desired features like drift detection, cloud codification, security scanning, etc. for an entire cloud environment.
 
-### [Quick Start](./#quick-start)
+### [Quick Start](quick-start.md)
 
-Get outputs from cloud-concierge in minutes!
+Get started locally in minutes!
 
 ### Managed Offering
 
