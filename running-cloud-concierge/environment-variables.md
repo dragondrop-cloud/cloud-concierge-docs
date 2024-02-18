@@ -9,19 +9,9 @@ description: Customizing the execution of cloud-concierge with environment varia
 * We provide [.env templates](https://github.com/dragondrop-cloud/cloud-concierge/tree/dev/examples/environments) for needed environment variables by cloud provider type
 * The dragondrop management platform offers a client-side environment variable validator to quickly check whether your environment variables are formatted correctly. This can be found [here](https://app.dragondrop.cloud/env-var-validator).
 
-### Managed Solution
-
-Using [dragondrop.cloud](https://app.dragondrop.cloud) as a management platform allows for all required variables to configured via a user interface.
-
 ## Variable Descriptions
 
 ### cloud-concierge Env Vars
-
-`CLOUDCONCIERGE_ORGTOKEN`
-
-* **Description**: Token for your dragondrop organization.
-  * Sign-into the [dragondrop management platform](https://app.dragondrop.cloud) through GitHub social sign-on. You will be redirected to the "Organization" tab, where you will have the opportunity to copy your org token.
-* **Example**: cco-my-org-token
 
 `CLOUDCONCIERGE_MIGRATIONHISTORYSTORAGE` - OPTIONAL
 
@@ -93,6 +83,12 @@ Using [dragondrop.cloud](https://app.dragondrop.cloud) as a management platform 
 
 `CLOUDCONCIERGE_VCSREPO`
 
+* **Description**: Repository for which cloud-concierge against which cloud-concierge should open a pull request.
+  * Currently only GitHub repositories are supported.
+* **Example**: [https://github.com/dragondrop-cloud/cloud-concierge.git](https://github.com/dragondrop-cloud/dragondrop-cloud.git)
+
+`CLOUDCONCIERGE_VCSPAT`
+
 * **Description**: Personal access token for the VCS provider specified. Allows the containerized executable to interact with the VCS provider to open a pull request containing new resources and needed migrations. The cloud-concierge [GitHub app](https://github.com/apps/cloud-concierge) should be installed on the repo specified.
   * For GitHub, should only be provided "Repo" permissions.
 * **Example**: ghp\_my-github-access-token
@@ -101,6 +97,18 @@ Using [dragondrop.cloud](https://app.dragondrop.cloud) as a management platform 
 
 * **Description**: VCS user name to be assigned as  Pull Request reviewer once cloud-concierge creates a pull request. To have no assigned reviewer, specify "NoReviewer".
 * **Example**: MyPRReviewerID
+
+### Cost Estimation Env Vars
+
+`CLOUDCONCIERGE_INFRACOSTTOKEN`
+
+* **Description**: Token for accessing the Infracost Cloud Pricing API.
+  * You can sign up for your free token at Infracost.io
+*   **Example**:&#x20;
+
+    ```
+    ico-mytoken
+    ```
 
 ### Terraform Cloud Env Vars (Required if selected as your state backend)
 

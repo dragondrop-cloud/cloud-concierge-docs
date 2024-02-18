@@ -10,7 +10,5 @@ Join our [Slack](https://github.com/dragondrop-cloud/cloud-concierge/blob/dev) c
 
 ### Other Resources
 
-* [Free Code Walk Through (low stakes and no pressure!)](https://github.com/dragondrop-cloud/cloud-concierge/blob/dev)
 * [Terraform Learning Resources](https://dragondrop.cloud/learn/terraform/)
 * [Medium Blog](https://medium.com/@hello\_9187)
-* [Managed Offering](https://dragondrop.cloud)
